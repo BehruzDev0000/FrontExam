@@ -1,13 +1,12 @@
-import { Calendar, ChevronDown, Clock } from "lucide-react"
 import Image from "next/image"
-import { FoodIcon } from "../../../../public/icons"
+import { FoodIcon } from "@/../public/icons"
 
 const Booking = () => {
   return (
-    <div className="containers flex items-center justify-between mt-[280px]! pb-[94px]">
-         <div className="w-[460px] rounded-3xl bg-white/40   p-8 ">
+    <div className="containers flex items-center justify-between mt-70! pb-23.5">
+         <div className="w-115 rounded-3xl bg-white/40   p-8 ">
 
-       <div className="w-[126px] h-[126px] rounded-full bg-black flex items-center justify-center text-white text-3xl -mt-16 mb-6 shadow-[0_0_0_10px_rgba(255,255,255,0.4)]">
+       <div className="w-31.5 h-31.5 rounded-full bg-black flex items-center justify-center text-white text-3xl -mt-16 mb-6 shadow-[0_0_0_10px_rgba(255,255,255,0.4)]">
   <FoodIcon />
 </div>
 

@@ -1,19 +1,17 @@
-import Advantages from "./modules/Advantages/Advantages";
-import Booking from "./modules/Booking/Booking";
-import Dishes from "./modules/Dishes/Dishes";
-import Hero from "./modules/Hero/Hero";
-import News from "./modules/News/News";
+import Advantages from "@/modules/Advantages/Advantages";
+import Booking from "@/modules/Booking/Booking";
+import Dishes from "@/modules/Dishes/Dishes";
+import Hero from "@/modules/Hero/Hero";
+import News from "@/modules/News/News";
 
 export default function Home() {
-
-
   return (
   <div>
     <Hero/>
-  <Dishes/>
-  <Booking/>
-  <Advantages/>
-  <News/>
+    <Dishes/>
+    <Booking/>
+    <Advantages/>
+    <News/>
   </div>
   );
 }

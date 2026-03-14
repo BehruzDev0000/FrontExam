@@ -1,6 +1,6 @@
-import Button from "@/app/components/Button"
-import NewsItem from "@/app/components/NewsItem"
-import { ArrowIcon } from "../../../../public/icons"
+import Button from "@/components/Button"
+import NewsItem from "@/components/NewsItem"
+import { ArrowIcon } from "@/../public/icons"
 
 export interface NewsCardType{
     id:number,
@@ -15,9 +15,9 @@ const News = () => {
             {id:3,description:"Используйте гибкие структуры, чтобы предоставить надежный обзор для обзоров высокого уровня. Итеративные подходы к данным корпоративной. " ,image:"/images/news3-img.png"}
         ]
   return (
-    <div className="containers mt-[71px] pb-[71px]!">
+    <div className="containers mt-17.75 pb-17.75!">
         <h2 className="text-center text-black text-[48px] leading-[150%]">Новости/Галерея</h2>
-        <div className="flex items-center justify-between mt-[143px]">
+        <div className="flex items-center justify-between mt-35.75">
             {NewsCards.map((item)=>(<NewsItem item={item} key={item.id}/>))}
         </div>
        <Button extraStyle="mt-[71px] ml-auto">

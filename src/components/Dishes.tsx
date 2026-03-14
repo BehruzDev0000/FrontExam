@@ -1,11 +1,11 @@
 import Image from "next/image"
-import { HeartOneIcon, WhiteBasket } from "../../../public/icons"
+import { HeartOneIcon, WhiteBasket } from "@/../public/icons"
 
 const DishesItem = ({item}:{item:{id:number,title:string,description:string,price:string}}) => {
   return (
-    <div className="relative pt-[144px] px-[18px] pb-[16px] w-[241px] bg-gradient-to-b from-white/40 to-white/40 rounded-[38px]">
+    <div className="relative pt-36 px-4.5 pb-4 w-60.25 bg-linear-to-b from-white/40 to-white/40 rounded-[38px]">
 
-      <div className="absolute -top-[80px] left-1/2 -translate-x-1/2 w-[224px]">
+      <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-56">
   <Image
     src="/images/food.png"
     alt={item.description}
@@ -20,7 +20,7 @@ const DishesItem = ({item}:{item:{id:number,title:string,description:string,pric
             {item.title}
           </h3>
 
-          <p className="mt-[3px] text-[13px] text-black leading-[150%]">
+          <p className="mt-0.75 text-[13px] text-black leading-[150%]">
             {item.description}
           </p>
         </div>
@@ -28,9 +28,9 @@ const DishesItem = ({item}:{item:{id:number,title:string,description:string,pric
         <HeartOneIcon/>
       </div>
 
-      <div className="flex justify-between mt-[12px]">
+      <div className="flex justify-between mt-3">
         <strong>${item.price}</strong>
-        <button className="p-[11px] bg-black text-white rounded-[5px] cursor-pointer">
+        <button className="p-2.75 bg-black text-white rounded-[5px] cursor-pointer">
           <WhiteBasket/>
         </button>
       </div>

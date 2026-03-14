@@ -13,7 +13,7 @@ interface NavbarProps {
 
 const Navbar: FC<NavbarProps> = ({ items }) => {
   return (
-    <nav className="flex gap-[43px] items-center">
+    <nav className="flex gap-10.75 items-center">
       {items.map((item) => (
         <Link href={item.href} key={item.id}>{item.title}</Link>
       ))}

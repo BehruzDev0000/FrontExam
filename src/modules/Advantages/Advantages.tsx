@@ -1,7 +1,7 @@
 import { PizzaIcon } from "lucide-react"
-import { AtmosphereIcon, CarIcon, ChefIcon, MaintenanceIcon, SoupIcon } from "../../../../public/icons"
+import { AtmosphereIcon, CarIcon, ChefIcon, MaintenanceIcon, SoupIcon } from "@/../public/icons"
 import { ReactNode } from "react"
-import AdvantageItem from "@/app/components/AdvantageItem"
+import AdvantageItem from "@/components/AdvantageItem"
 export interface AdvantageListType{
         id:number,
         title:string,
@@ -19,9 +19,9 @@ const Advantages = () => {
         {id:6,title:"Обслуживания",description:"Входные билеты в музеи, для посещения достопримечательностей, памятников",icon:<MaintenanceIcon/>}
     ]
   return (
-    <div className="containers pb-[71px]">
+    <div className="containers pb-17.75">
         <h2 className="text-[48px] leading-[150%] text-black text-center">Почему именно мы?</h2>
-        <div className="flex items-start mt-[77px] justify-between flex-wrap space-y-[96px]">
+        <div className="flex items-start mt-19.25 justify-between flex-wrap space-y-24">
         {AdvantageList.map((item)=>(<AdvantageItem key={item.id} item={item}/>))}
         </div>
         

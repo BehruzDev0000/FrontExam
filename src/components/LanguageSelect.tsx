@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { BottomArrow } from "../../../public/icons";
+import { BottomArrow } from "@/../public/icons";
 
 const languages = [
   { value: "ru", label: "Русский", flag: "🇷🇺" },
-  { value: "uz", label: "O'zbekcha", flag: "🇺🇿" },
+  { value: "uz", label: "Uzbek", flag: "🇺🇿" },
   { value: "en", label: "English", flag: "🇺🇸" },
 ];
 
