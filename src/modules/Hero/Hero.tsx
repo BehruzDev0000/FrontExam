@@ -1,16 +1,19 @@
+"use client"
 import Navbar, { Item } from '@/components/Navbar'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { ArrowIcon, BasketIcon, HeartIcon, Logo } from '@/../public/icons'
 import Button from '@/components/Button'
 import Image from 'next/image'
+import {useTranslations} from 'next-intl'
 
 const Hero = () => {
+    const t=useTranslations('Hero')
       const menuItems:Item[]= [
-      { id: 1, title: "Меню",href:'/menu' },
-      { id: 2, title: "Новости",href:'/news' },
-      { id: 3, title: "Бронирование" ,href:'/booking'},
-      { id: 4, title: "О нас" ,href:'/about'},
-      { id: 5, title: "Контакты" ,href:'/contacts'},
+      { id: 1, title: t('navbar.menu'),href:'/menu' },
+      { id: 2, title: t('navbar.news'),href:'/news' },
+      { id: 3, title: t('navbar.booking') ,href:'/booking'},
+      { id: 4, title: t('navbar.about') ,href:'/about'},
+      { id: 5, title: t('navbar.contact') ,href:'/contacts'},
     ]
     
   return (
@@ -29,9 +32,9 @@ const Hero = () => {
       </div>
       <div className="flex items-center justify-between mt-14.25">
         <div className="max-w-83">
-          <h2 className="text-[64px] leading-[150%] text-black uppercase">Вкусная еда ждет тебя!</h2>
+          <h2 className="text-[64px] leading-[150%] text-black uppercase">{t('title')}</h2>
           <Button extraStyle="mt-[17px]!">
-            Посмотреть меню
+              {t('menuButton')}
             <ArrowIcon/>
             </Button>
         </div>

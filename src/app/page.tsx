@@ -1,17 +1,5 @@
-import Advantages from "@/modules/Advantages/Advantages";
-import Booking from "@/modules/Booking/Booking";
-import Dishes from "@/modules/Dishes/Dishes";
-import Hero from "@/modules/Hero/Hero";
-import News from "@/modules/News/News";
+import { redirect } from 'next/navigation';
 
-export default function Home() {
-  return (
-  <div>
-    <Hero/>
-    <Dishes/>
-    <Booking/>
-    <Advantages/>
-    <News/>
-  </div>
-  );
+export default function RootPage() {
+  redirect('/uz');
 }
