@@ -61,12 +61,11 @@ const Advantages = () => {
             <h2 className="text-[48px] leading-[150%] text-black text-center">
                 {t("title")}
             </h2>
-            <div className="flex items-start mt-19.25 justify-between flex-wrap space-y-24">
+                  <div className="mt-19.25 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-10.75 gap-y-10 place-items-start">
                 {AdvantageList.map((item) => (
                     <AdvantageItem key={item.id} item={item} />
                 ))}
             </div>
-
         </div>
     )
 }

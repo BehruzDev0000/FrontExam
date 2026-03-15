@@ -17,7 +17,7 @@ const Hero = () => {
     ]
     
   return (
-    <div className="relative containers mt-7.5 pt-13.75! px-17! pb-25! bg-[linear-gradient(180deg,rgba(255,255,255,0.4)_0%,rgba(255,255,255,0.4)_100%)] rounded-[50px]">
+    <div className="relative containers mt-7.5! pt-13.75! px-17! pb-25! bg-[linear-gradient(180deg,rgba(255,255,255,0.4)_0%,rgba(255,255,255,0.4)_100%)] rounded-[50px]">
       <div className="flex items-center justify-between">
       <Link href={'/'}>
       <Logo/>
@@ -30,7 +30,7 @@ const Hero = () => {
       <BasketIcon/>
       </div>
       </div>
-      <div className="flex items-center justify-between mt-14.25">
+      <div className="flex items-center justify-between mt-14.25!">
         <div className="max-w-83">
           <h2 className="text-[64px] leading-[150%] text-black uppercase">{t('title')}</h2>
           <Button extraStyle="mt-[17px]!">

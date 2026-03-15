@@ -1,18 +1,28 @@
-import { FC } from "react"
-import { AdvantageListType } from "@/modules/Advantages/Advantages"
+"use client"
 
-interface Props {
-  item: AdvantageListType
+import { ReactNode } from "react"
+
+export interface AdvantageListType {
+    id: number
+    title: string
+    description: string
+    icon: ReactNode
 }
 
-const AdvantageItem: FC<Props> = ({ item }) => {
-  return (
-    <div className="w-93.75">
-      {item.icon}
-      <h3 className="text-[32px] leading-[150%] text-black mt-2.75">{item.title}</h3>
-      <p className="mt-2.5 text-[16px] text-black ">{item.description}</p>
-    </div>
-  )
+interface AdvantageItemProps {
+    item: AdvantageListType
+}
+
+const AdvantageItem = ({ item }: AdvantageItemProps) => {
+    return (
+        <div className="w-full max-w-90">
+            <div className="text-black [&_svg]:w-13.5 [&_svg]:h-13.5">
+                {item.icon}
+            </div>
+            <h3 className="text-[42px] leading-[120%] text-black mt-2.75">{item.title}</h3>
+            <p className="text-[16px] leading-[160%] text-[#000000] mt-1">{item.description}</p>
+        </div>
+    )
 }
 
 export default AdvantageItem

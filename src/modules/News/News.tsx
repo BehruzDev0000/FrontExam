@@ -34,7 +34,7 @@ const News = () => {
     ]
 
     return (
-        <div className="containers mt-17.75 pb-17.75!">
+        <div className="containers mt-17.75! pb-17.75!">
             <h2 className="text-center text-black text-[48px] leading-[150%]">
                 {t("title")}
             </h2>

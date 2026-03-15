@@ -11,8 +11,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="uz" className={cn("font-mono", jetbrainsMono.variable)}>
-      <body>{children}</body>
+    <html lang="uz" className={cn("font-mono", jetbrainsMono.variable)} suppressHydrationWarning>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }

@@ -1,21 +1,21 @@
 "use client"
 
-import { usePathname, useRouter } from "@/i18n/navigation";
+import dynamic from "next/dynamic";
 import {
   MailIcon,
   PhoneIcon,
-  RuIcon,
   UserIcon,
 } from "@/../public/icons";
 import Button from "@/components/Button";
-import { useLocale, useTranslations } from "next-intl";
+import {  useTranslations } from "next-intl";
+
+const LanguageSelect = dynamic(() => import("@/components/LanguageSelect"), {
+  ssr: false,
+});
 
 const Header = () => {
 
   const t = useTranslations("Header");
-  const locale = useLocale();
-  const pathname = usePathname();
-  const router = useRouter();
 
   return (
       <div className="containers">
@@ -38,24 +38,7 @@ const Header = () => {
           </div>
           <div className="flex items-center gap-8.75">
             <div className="flex items-center gap-2">
-              <RuIcon />
-              <select
-                className="text-[16px] text-black"
-                value={locale}
-                onChange={(event) => {
-                  router.replace(pathname, {locale: event.target.value as "uz" | "ru" | "en"});
-                }}
-              >
-                <option value="ru">
-                  {t("languages.ru")}
-                </option>
-                <option value="uz">
-                  {t("languages.uz")}
-                </option>
-                <option value="en">
-                  {t("languages.en")}
-                </option>
-              </select>
+              <LanguageSelect/>
             </div>
             <Button extraStyle="py-[3px]! px-[8px]! text-white gap-[6px]! text-[10px]">
               <UserIcon />
