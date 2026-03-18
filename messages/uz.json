@@ -68,6 +68,9 @@
   },
   "News": {
     "title": "Yangiliklar / Galereya",
+    "page": "Asosiy",
+    "newsTitle": "Yangiliklar",
+    "galleryTitle": "Galereya",
     "button": "Barchasini ko'rish",
     "items": {
       "post1": {
@@ -103,5 +106,34 @@
       "location": "O'zbekiston, Toshkent",
       "street": "24-ko'cha"
     }
+  },
+  "Menu":{
+    "title": "Menyu",
+    "page": "Asosiy",
+    "newsTitle": "Yangiliklar / Galereya",
+    "newsButton": "Barchasini ko'rish"
+  },
+  "Bookings":{
+    "title": "Bron qilish",
+    "page":"Asosiy",
+    "bookingTitle":"Stol band qilmoqchimisiz?",
+    "bookingButton": "Hozir buyurtma bering",
+    "bookingNewsTitle":"Yangiliklar / Galereya",
+    "bookingNewsButton": "Barchasini ko'rish",
+    "subtitle": "Ochilish vaqti",
+    "monday": "Dushanba",
+    "tuesday": "Seshanba",
+    "wednesday": "Chorshanba",
+    "thursday": "Payshanba",
+    "friday": "Juma",
+    "saturday": "Shanba",
+    "sunday": "Yakshanba",
+    "bookingTimeOne": "10:00 - 22:00",
+    "bookingTimeTwo": "10:00 - 23:00",
+    "contact": "Biz bilan bog'laning",
+    "write": "Yozing",
+    "call": "Biz bilan bog'laning",
+    "visit": "Bizni vizit qiling",
+    "address": "O'zbekiston, Toshkent, 24-ko'cha"
   }
 }

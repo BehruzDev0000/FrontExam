@@ -1,7 +1,7 @@
 import Image from "next/image"
 
 import { NewsCardType } from "@/modules/News/News"
-import { SergeiIcon } from "@/../public/icons"
+import { SergeiIcon } from "@/public/icons"
 
 const NewsItem = ({ item }: { item: NewsCardType }) => {
   return (
@@ -9,7 +9,7 @@ const NewsItem = ({ item }: { item: NewsCardType }) => {
 
       <div className="relative w-53.25 h-39.5 rounded-3xl overflow-hidden -mt-16 mb-6">
         <Image
-          src={item.image}
+          src={`https://anorkhulov.uz/${item.image}`}
           alt={item.description || "news"}
           width={213} 
           height={158}

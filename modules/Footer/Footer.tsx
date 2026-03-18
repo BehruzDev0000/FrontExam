@@ -2,16 +2,17 @@
 
 import { Link } from "@/i18n/navigation"
 import { useTranslations } from "next-intl"
-import { FaceBookIcon, InstagramIcon, Logo, TelegramIcon, WhatsAppIcon } from "@/../public/icons"
+import { FaceBookIcon, InstagramIcon, Logo, TelegramIcon, WhatsAppIcon } from "@/public/icons"
 
 const Footer = () => {
 
     const t = useTranslations("Footer")
 
     return (
-        <div className="containers flex items-start pb-17.75!">
+        <div className=" footer-section">
+ <div className="containers flex items-start pb-17.75!">
             <div className="flex flex-col items-start pt-14.5 w-34">
-                <Logo/>
+                <Link href="/"><Logo/></Link>
                 <div className="mt-2.5 flex items-center gap-2.5">
                     <Link href="/"><TelegramIcon/></Link>
                     <Link href="/"><WhatsAppIcon/></Link>
@@ -76,6 +77,8 @@ const Footer = () => {
                 </div>
             </div>
         </div>
+        </div>
+       
     )
 }
 

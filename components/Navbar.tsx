@@ -1,22 +1,35 @@
-import {Link} from '@/i18n/navigation'
-import { FC } from "react"
+"use client"
 
-export interface Item {
+import { Link, usePathname } from "@/i18n/navigation"
+
+export type Item = {
   id: number
   title: string
-  href:string
+  href: string
 }
 
-interface NavbarProps {
-  items: Item[]
-}
+const Navbar = ({ items }: { items: Item[] }) => {
+  const pathname = usePathname()
 
-const Navbar: FC<NavbarProps> = ({ items }) => {
   return (
-    <nav className="flex gap-10.75 items-center">
-      {items.map((item) => (
-        <Link href={item.href} key={item.id}>{item.title}</Link>
-      ))}
+    <nav className="flex items-center gap-6">
+      {items.map((item) => {
+        const isActive = pathname === item.href
+
+        return (
+          <Link
+            key={item.id}
+            href={item.href}
+            className={`transition text-[18px] leading-[150%] ${
+              isActive
+                ? "text-[#FF0000]"
+                : "text-black"
+            }`}
+          >
+            {item.title}
+          </Link>
+        )
+      })}
     </nav>
   )
 }

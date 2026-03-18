@@ -2,6 +2,7 @@ import { FC, ReactNode } from "react"
 interface ButtonProps{
   extraStyle?:string,
   children:ReactNode
+  type?:'submit'|'button'
 }
 const Button:FC<ButtonProps> = ({extraStyle,children}) => {
   return (

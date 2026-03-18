@@ -7,7 +7,7 @@ import Image from "next/image"
 import { ChevronDown } from "lucide-react"
 
 const languages = [
-    { code: "uz", label: "O‘zbek", flag: "/images/uz-flag.jpg" },
+    { code: "uz", label: "O‘zbek", flag: "/images/uz-flag.png" },
     { code: "ru", label: "Русский", flag: "/images/ru-flag.png" },
     { code: "en", label: "English", flag: "/images/en-flag.png" }
 ]
@@ -19,7 +19,7 @@ const LanguageSelect = () => {
     const pathname = usePathname()
     const router = useRouter()
 
-    const current = languages.find(l => l.code === locale)
+    const current = languages.find(language => language.code === locale)
 
     const changeLanguage = (lang: string) => {
         router.replace(pathname, { locale: lang as "uz" | "ru" | "en" })
@@ -47,7 +47,7 @@ const LanguageSelect = () => {
                             onClick={() => changeLanguage(lang.code)}
                             className="flex items-center gap-2 w-full px-3 py-2 hover:bg-gray-100 transition cursor-pointer"
                         >
-                            <Image src={lang.flag} alt={lang.label} width={20} height={14}/>
+                            <Image src={lang.flag} alt={lang.label} width={20} height={14} className="h-auto object-cover"/>
                             <span>{lang.label}</span>
                         </button>
                     ))}

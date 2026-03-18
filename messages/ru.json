@@ -68,6 +68,9 @@
   },
   "News": {
 	"title": "Новости / Галерея",
+	"page": "Главная",
+	"newsTitle": "Новости",
+	"galleryTitle": "Галерея",
 	"button": "Посмотреть все",
 	"items": {
 	  "post1": {
@@ -103,5 +106,34 @@
 	  "location": "Узбекистан, Ташкент",
 	  "street": "Улица 24"
 	}
+  },
+  "Menu":{
+	"title": "Меню",
+	"page": "Главная",
+	"newsTitle": "Новости / Галерея",
+	"newsButton": "Посмотреть все"
+  },
+  "Bookings":{
+    "title": "Бронирование",
+    "page":"Главная",
+    "bookingTitle":"Хотите забронировать стол?",
+    "bookingButton": "Забронировать",
+	"bookingNewsTitle":"Новости/Галерея",
+	"bookingNewsButton": "Посмотреть все",
+	"subtitle":"Открытие часов",
+	"monday": "Понедельник",
+	"tuesday": "Вторник",
+	"wednesday": "Среда",
+	"thursday": "Четверг",
+	"friday": "Пятница",
+	"saturday": "Суббота",
+	"sunday": "Воскресенье",
+	"bookingTimeOne": "10:00 - 22:00",
+	"bookingTimeTwo": "10:00 - 23:00",
+	"contact": "Свяжитесь с нами",
+	"write": "Напишите нам",
+	"call": "Звоните нам",
+	"visit": "Посетите нас",
+	"address": "Узбекистан, Ташкент, Улица 24"
   }
 }

@@ -2,6 +2,7 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -116,6 +117,40 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+body {
+  background-image: url("./../../public/images/project-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.containers{
+  width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.hero-section{
+  background-image: url("./../../public/images/hero-bg.png");
+  background-position:center;
+background-repeat: no-repeat;
+  background-size: cover;
+}
+.popular-section{
+  background-image: url("./../../public/images/popular-bg.png");
+  background-repeat:no-repeat;
+  background-size: cover
+}
+.booking-section{
+  background-image: url("./../../public/images/hero-order-img.png");
+  background-size: 1025px 936px;
+  background-repeat: no-repeat;
+  background-position: 120% center
+}
+.footer-section{
+  background-image: url("./../../public/images/footer-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
 @layer base {
   * {
     @apply border-border outline-ring/50;

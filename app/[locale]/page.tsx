@@ -2,7 +2,7 @@ import Advantages from "@/modules/Advantages/Advantages";
 import Booking from "@/modules/Booking/Booking";
 import Dishes from "@/modules/Dishes/Dishes";
 import Hero from "@/modules/Hero/Hero";
-import News from "@/modules/News/News";
+import NewsModule from "@/modules/News/News";
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
       <Dishes/>
       <Booking/>
       <Advantages/>
-      <News/>
+      <NewsModule />
     </div>
   );
 }

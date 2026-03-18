@@ -68,6 +68,9 @@
   },
   "News": {
     "title": "News / Gallery",
+    "page":"Main",
+    "newsTitle": "News",
+    "galleryTitle": "Gallery",
     "button": "View all",
     "items": {
       "post1": {
@@ -103,5 +106,35 @@
       "location": "Uzbekistan, Tashkent",
       "street": "Street 24"
     }
+  },
+  "Menu":{
+    "title": "Menu",
+    "page":"Main",
+    "newsTitle":"News / Gallery",
+    "newsButton": "View all"
+  },
+  "Bookings":{
+    "title": "Booking",
+    "page":"Main",
+    "bookingTitle":"Would you like to reserve a table?",
+    "bookingButton": "book",
+    "bookingNewsTitle":"News / Gallery",
+    "bookingNewsButton": "View all",
+    "subtitle": "Opening hours",
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday",
+    "bookingTimeOne": "10:00 - 22:00",
+    "bookingTimeTwo": "10:00 - 23:00",
+    "contact":"Contact us",
+    "write": "Write to us",
+    "call": "Call us",
+    "visit": "Visit us",
+    "address": "Uzbekistan, Tashkent, Street 24"
+
   }
 }

@@ -1,9 +1,10 @@
 "use client"
 
-import { AtmosphereIcon, CarIcon, ChefIcon, MaintenanceIcon, SoupIcon } from "@/../public/icons"
+import { AtmosphereIcon, CarIcon, ChefIcon, MaintenanceIcon, SoupIcon } from "@/public/icons"
 import { ReactNode } from "react"
 import AdvantageItem from "@/components/AdvantageItem"
 import { useTranslations } from "next-intl"
+import { PizzaIcon } from "@/public/icons"
 
 export interface AdvantageListType {
     id: number
