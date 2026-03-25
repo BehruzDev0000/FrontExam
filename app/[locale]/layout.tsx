@@ -5,6 +5,7 @@ import "./globals.css"
 import Providers from './providers';
 import { getMessages } from 'next-intl/server';
 import LayoutWrapper from './layoutwrapper';
+import { LikeProvider } from '@/context/Context';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -28,13 +29,15 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body>
-        <Providers>
+        <LikeProvider>
+          <Providers>
           <NextIntlClientProvider messages={messages}>
             <LayoutWrapper>
               {children}
             </LayoutWrapper>
           </NextIntlClientProvider>
         </Providers>
+        </LikeProvider>
       </body>
     </html>
   );

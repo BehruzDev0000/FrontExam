@@ -3,8 +3,9 @@ import Button from "@/components/Button"
 import { useRouter } from "@/i18n/navigation"
 import { SignUp } from "@/service/getAll"
 import { useMutation } from "@tanstack/react-query"
-import { FormEvent } from "react"
 import toast, { Toaster } from "react-hot-toast"
+import { SubmitEvent } from "react"
+
 
 const Register = () => {
   const router=useRouter()
@@ -16,21 +17,21 @@ const Register = () => {
       
       toast.success("Muvaffaqiyatli ro'yxatdan o'tdingiz")
       setTimeout(() => {
-        router.push("/signin")
+        router.push("/sign-in")
       }, 1000)
     },
     onError:() => {
       toast.error("Xato")
     }
   })
-  const handleSignUp = (e:FormEvent<HTMLFormElement>) => {
+  const handleSignUp = (e:SubmitEvent<HTMLFormElement>) => {
     e.preventDefault()
     const data={
-      lastName: (e.target as HTMLFormElement).lastName.value,
-      firstName: (e.target as HTMLFormElement).firstName.value,
-      email: (e.target as HTMLFormElement).email.value,
-      username: (e.target as HTMLFormElement).username.value,
-      password: (e.target as HTMLFormElement).password.value,
+      lastName: e.target.lastName.value,
+      firstName: e.target.firstName.value,
+      email: e.target.email.value,
+      username: e.target.username.value,
+      password: e.target.password.value,
     }
     if(!data.lastName || !data.firstName || !data.email ||!data.username || !data.password){
       toast.error("Iltimos barcha maydonlarni to'ldiring")
@@ -42,7 +43,6 @@ const Register = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#6f6b63] to-[#c9bba3]">
       
-      <Toaster position="top-center" />
 
       <form onSubmit={handleSignUp}
         className=" w-[463px] rounded-[31px] bg-white/40 backdrop-blur-xl px-[54px] pb-[41px] pt-[63px] shadow-lg flex flex-col"

@@ -4,10 +4,10 @@ import Button from "@/components/Button"
 import { FoodIcon } from "@/public/icons"
 import { SignIn } from "@/service/getAll"
 import { useMutation } from "@tanstack/react-query"
-import { FormEvent } from "react"
-import toast, { Toaster } from "react-hot-toast"
+import {  SubmitEvent } from "react"
+import toast from "react-hot-toast"
 import { setCookie } from "cookies-next"
-import { useRouter } from "@/i18n/navigation"
+import { Link, useRouter } from "@/i18n/navigation"
 
 const Login = () => {
 const router=useRouter()
@@ -19,7 +19,7 @@ const router=useRouter()
     onSuccess: (data) => {
       setCookie("user", JSON.stringify(data.data))
      
-      toast.success("Muvaffaqiyatli SignIn!")
+      toast.success("Muvaffaqiyatli kirdingiz!")
       setTimeout(() => {
         router.push("/menu")
       }, 1000)
@@ -30,13 +30,13 @@ const router=useRouter()
     },
   })
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: SubmitEvent<HTMLFormElement>) => {
     e.preventDefault()
 
 
     const data = {
-      username: (e.target as HTMLFormElement).username.value,
-      password: (e.target as HTMLFormElement).password.value,
+      username: e.target.username.value,
+      password: e.target.password.value,
     }
 
     if (!data.username || !data.password) {
@@ -50,7 +50,6 @@ const router=useRouter()
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#6f6b63] to-[#c9bba3]">
       
-      <Toaster position="top-center" />
 
       <form 
         onSubmit={handleSubmit}
@@ -92,9 +91,11 @@ const router=useRouter()
           </Button>
         </div>
 
+        <Link href={'/auth/sign-up'}>
         <p className="text-center mt-[7px] text-[#06004C] text-[12px] leading-[150%] cursor-pointer">
           Еще нет учетной записи?
         </p>
+        </Link>
 
       </form>
     </div>
