@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image"
-import { WhiteBasket } from "@/public/icons"
+import { WhiteBasket } from "./../public/icons"
 import { Product } from "@/@types/mainTypes"
 import { getCookie } from "cookies-next"
 import toast from "react-hot-toast"
